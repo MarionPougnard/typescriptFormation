@@ -10,9 +10,11 @@
  * 
   */
 
-const multiplyByTwo = null;
+const multiplyByTwo = tableau => {
+    return tableau.map( t => t*2)
+};
 
-
+console.log(multiplyByTwo([2, 4, 3]));
 /**
  * Utiliser la fonction .filter sur le tableau passé en paramètre
  * retourne un nouveau tableau avec uniquement les nom qui commencent par la lettre "A"
@@ -23,8 +25,10 @@ const multiplyByTwo = null;
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const filterNameStartByA = null;
-
+const filterNameStartByA = tableauNom => {
+    return tableauNom.filter(nom => nom.startsWith("A"))
+};
+console.log(filterNameStartByA(["Anaël", "Marine", "Arthur"]));
 /**
  * Utiliser la fonction .reduce sur le tableau passé en paramètre
  * retourne la somme des valeurs du tableau
@@ -35,8 +39,9 @@ const filterNameStartByA = null;
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const sum = null;
+const sum = tableau => tableau.reduce((a, b) => a + b, 0);
 
+console.log(sum([2, 3, 4, 7]));
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
  * retourne l'utilisateur qui a l'id passé en 2e paramètre
@@ -56,7 +61,13 @@ const sum = null;
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const findUserById = null;
+const findUserById = (tableau, id) => tableau.find(x => x.id === id);
+console.log(findUserById([
+    {id: 1, name: 'John'},
+    {id: 2, name: 'Doe'},
+    {id: 3, name: 'Foo'},
+    {id: 4, name: 'Bar'},
+], 3));
 
-
+// node 05_arrayOperations.js
 module.exports = {multiplyByTwo, filterNameStartByA, sum, findUserById};
