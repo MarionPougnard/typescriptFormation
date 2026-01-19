@@ -8,7 +8,7 @@
  */
 
 let arrow1 = a => {
-    return a++
+    return a + 1
 }
 
 /**
@@ -20,7 +20,7 @@ let arrow1 = a => {
  *   - le mot clée "return" est interdit
  */
 
-let arrow2 = b => b++
+let arrow2 = b => b + 1
 
 console.log(arrow1(1), arrow2(2));
 // node ./04_arrow.js

@@ -8,8 +8,8 @@
  *  - for, foreach, while, do while sont interdits
  */
 
-const concat = null;
-
+const concat = (firstArray, secondArray) => [...firstArray, ...secondArray]
+console.log("concat", concat([1, 2, 3], [4, 5, 6]))
 /**
  * utiliser l'opérateur de composition ... afin d'ajouter un élément à un tableau
  * 
@@ -19,15 +19,18 @@ const concat = null;
  * - ne pas utiliser la méthode push
  */
 
-const push = null;
-
+const push = (firstArray, element) => [...firstArray, element]
+console.log("push", push([1, 2, 3], 4))
 /**
  * utiliser l'opérateur de composition ... afin de fusionner 2 objets passés en paramètres
  * 
  * ex: {a: 1, b: 2}, {c: 3, d: 4} => {a: 1, b: 2, c: 3, d: 4}
  */
 
-const merge = null;
+const merge = (firstObject, secondObject) => {
+    return {...firstObject, ...secondObject}
+}
+console.log("merge", merge({a: 1, b: 2}, {c: 3, d: 4}))
 
 /**
  * utiliser l'opérateur de composition ... afin de modifier la propriété name de l'objet
@@ -38,7 +41,12 @@ const merge = null;
  *  - interdiction d'utiliser l'opérateur d'affectation "="
  */
 
-const setName = null;
+const setName = (objet, name) => {
+    return {...objet, name: name}
+}
+console.log(setName({name: 'toto'}, 'titi'))
+
+// node ./06_composition.js
 
 // astuce: {...obj} crée une copie de l'objet, c'est un des principes de l'immutabilité et évite les problèmes de référence
 module.exports = {concat, push, merge, setName}

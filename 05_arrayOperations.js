@@ -10,9 +10,7 @@
  * 
   */
 
-const multiplyByTwo = tableau => {
-    return tableau.map( t => t*2)
-};
+const multiplyByTwo = tableau => tableau.map( t => t*2)
 
 console.log(multiplyByTwo([2, 4, 3]));
 /**
@@ -25,9 +23,7 @@ console.log(multiplyByTwo([2, 4, 3]));
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const filterNameStartByA = tableauNom => {
-    return tableauNom.filter(nom => nom.startsWith("A"))
-};
+const filterNameStartByA = tableauNom => tableauNom.filter(nom => nom.startsWith("A"))
 console.log(filterNameStartByA(["Anaël", "Marine", "Arthur"]));
 /**
  * Utiliser la fonction .reduce sur le tableau passé en paramètre
@@ -61,7 +57,7 @@ console.log(sum([2, 3, 4, 7]));
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const findUserById = (tableau, id) => tableau.find(x => x.id === id);
+const findUserById = (tableau, id) => tableau.find(x => x.id === id).name;
 console.log(findUserById([
     {id: 1, name: 'John'},
     {id: 2, name: 'Doe'},
