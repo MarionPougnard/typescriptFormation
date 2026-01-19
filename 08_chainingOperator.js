@@ -16,6 +16,12 @@
  * 
  */
 
-const getGroupName = null;
-
+const getGroupName = (objet) => objet.group?.name;
+console.log(getGroupName({
+    name: "John",
+    group: {
+        name: "admin"
+    }
+}));
+// node ./08_chainingOperator.js
 module.exports = {getGroupName};

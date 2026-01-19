@@ -9,4 +9,7 @@
  *  - ne pas utiliser la fonction concat de String
  */
 
-const concat = null;
+const concat = (nom, prenom) => `${nom} ${prenom}`;
+console.log(concat("John", "Doe"))
+
+// node ./09_strings.js

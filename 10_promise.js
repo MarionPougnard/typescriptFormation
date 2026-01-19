@@ -5,5 +5,15 @@
  * utilisez new Promise
  */
 
-const sleep = null;
+
+/*const sleep = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve()
+    }, 2000)
+})*/
+
+const sleep = () => new Promise(resolve => setTimeout(resolve, 2000))
+
+
+// node 10_promise.js
 module.exports = {sleep};

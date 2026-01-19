@@ -27,9 +27,7 @@ console.log("push", push([1, 2, 3], 4))
  * ex: {a: 1, b: 2}, {c: 3, d: 4} => {a: 1, b: 2, c: 3, d: 4}
  */
 
-const merge = (firstObject, secondObject) => {
-    return {...firstObject, ...secondObject}
-}
+const merge = (firstObject, secondObject) => ({...firstObject, ...secondObject})
 console.log("merge", merge({a: 1, b: 2}, {c: 3, d: 4}))
 
 /**
@@ -41,9 +39,7 @@ console.log("merge", merge({a: 1, b: 2}, {c: 3, d: 4}))
  *  - interdiction d'utiliser l'opérateur d'affectation "="
  */
 
-const setName = (objet, name) => {
-    return {...objet, name: name}
-}
+const setName = (objet, name) => ({...objet, name: name})
 console.log(setName({name: 'toto'}, 'titi'))
 
 // node ./06_composition.js
