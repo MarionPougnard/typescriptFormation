@@ -57,7 +57,7 @@ console.log(sum([2, 3, 4, 7]));
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const findUserById = (tableau, id) => tableau.find(x => x.id === id).name;
+const findUserById = (tableau, id) => tableau.find(x => x.id === id)?.name;
 console.log(findUserById([
     {id: 1, name: 'John'},
     {id: 2, name: 'Doe'},
