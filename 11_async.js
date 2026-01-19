@@ -1,4 +1,5 @@
 const {sleep} = require("./10_promise");
+const ternaire = require("./02_ternaire")
 
 /**
  * Créez une fonction synchrone qui attend 2 seconde puis execute le callback passé en paramètre
@@ -11,7 +12,15 @@ const {sleep} = require("./10_promise");
  *    - ne pas utiliser async await
  * 
  */
-const usingThen = null;
+const usingThen = (a, b) => {
+    console.log("usingThen start", a, b);
+    sleep().then(() => {
+        const result = ternaire(a, b)
+        console.log("usingThen end", result)
+    });
+}
+usingThen(7, 5);
+
 
 /**
  * Créez une fonction asynchrone qui attend 2 seconde puis execute le callback passé en paramètre
@@ -24,8 +33,13 @@ const usingThen = null;
  *   - ne pas utiliser .then
  */
 
-const usingAwait = null;
-
+const usingAwait = async(c, d) => {
+    console.log("usingAwait start", c, d);
+    await sleep()
+    const result = ternaire(c,d)
+    console.log("usingAwait end", result);
+};
+usingAwait(4, 5)
 /**
  * Créez une fonction asynchrone qui effectue un appel api vers l'url passé en paramètre
  * retourne le résultat de la requête (body)
@@ -41,7 +55,17 @@ const usingAwait = null;
 //décommentez la ligne suivante une fois le package installé
 const axios = require("axios");
 
-const apiResponse = null;
+const apiResponse = async(url) => {
+    try {
+        const response = await fetch(url);
+        const json = await response.json();
+        console.log(json)
+    } catch (error) {
+        console.error(error)
+    }
+}
+apiResponse('https://jsonplaceholder.typicode.com/todos/1');
 
 
+// NODE_TLS_REJECT_UNAUTHORIZED=0 node ./11_async.js
 module.exports = {usingThen, usingAwait, apiResponse};
