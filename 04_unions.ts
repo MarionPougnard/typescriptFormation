@@ -29,7 +29,7 @@
 export type User = { username: string };
 
 export function formatId(id: number | string) {
-    return typeof  id === "string" ? id : `ID_${id}`
+    return typeof  id === "string" ? id : `ID-${id}`
   throw new Error("Not implemented");
 }
 console.log(formatId(123))

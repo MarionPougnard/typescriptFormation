@@ -14,6 +14,11 @@
 
 // TODO: Implémenter createPerson
 
-export function createPerson(name: any, age: any): any {
+export function createPerson(name: string, age: number): [string, number] {
+    return [name, age];
   throw new Error("Not implemented");
 }
+console.log(createPerson("Alice", 25))
+console.log(createPerson("Bob", 30))
+
+// npx tsx ./08_tuples

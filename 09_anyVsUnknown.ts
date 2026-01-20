@@ -31,9 +31,19 @@
 // TODO: Implémenter les fonctions
 
 export function processUnknown(value: unknown): number {
+    return typeof value === "string" ? value.length : 0
   throw new Error("Not implemented");
 }
+console.log(processUnknown("hello"))
+console.log(processUnknown(123))
+console.log(processUnknown(null))
 
 export function safeParseNumber(value: unknown): number | null {
+    return !!(Number(value)) ? Number(value) : null;
   throw new Error("Not implemented");
 }
+console.log(safeParseNumber("42"))
+console.log(safeParseNumber(3.14))
+console.log(safeParseNumber("abc"))
+console.log(safeParseNumber(null))
+// npx tsx ./09_anyVsUnknown.ts

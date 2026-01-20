@@ -44,3 +44,5 @@ export function toPreview(article: any): any {
 export function createArticle(data: any): any {
   throw new Error("Not implemented");
 }
+
+// npx tsx ./15_utilityPickOmit.ts

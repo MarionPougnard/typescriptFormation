@@ -43,3 +43,5 @@ export function createConfig(apiUrl: any, timeout: any, maxRetries: any): any {
 export function validateConfig(config: any): any {
   throw new Error("Not implemented");
 }
+
+//  npx tsx ./16_utilityReadonlyRecord.ts
