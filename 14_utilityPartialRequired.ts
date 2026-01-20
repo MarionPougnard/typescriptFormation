@@ -26,9 +26,9 @@
 
 // TODO: Définir le type UserProfile
 export type UserProfile = {
-    username: string
-    email: string
-    age: number
+    username: string,
+    email: string,
+    age: number,
     bio: string
 };
 

@@ -32,8 +32,8 @@
 
 export type Config = {
     apiUrl: string,
-   timeout: number,
-   maxRetries: number
+    timeout: number,
+    maxRetries: number
 };
 
 export type ImmutableConfig = Readonly<Config>;
@@ -43,7 +43,7 @@ export function createConfig(apiUrl: string, timeout: number, maxRetries: number
   throw new Error("Not implemented");
 }
 
-export function validateConfig(config: ImmutableConfig): Boolean {
+export function validateConfig(config: ImmutableConfig) {
     return config.timeout > 0 && config.maxRetries > 0
   throw new Error("Not implemented");
 }
