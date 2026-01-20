@@ -42,7 +42,7 @@ export type Data = {
 export async function fetchUsername(userId: number): Promise<string> {
     const response = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
     if (!response.ok) throw new Error("requête non ok");
-    const data: Data = await response.json()
+    const data: Data = await response.json() as Data;
     return data?.username;
   throw new Error("Not implemented");
 }

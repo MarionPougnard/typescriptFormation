@@ -19,7 +19,7 @@
 // TODO: Implémenter la fonction
 
 export function showUserGroup(user: string, groupName?: string) {
-    return groupName ? groupName : "pas de groupe"
+    return !!groupName ? groupName : "pas de groupe"
   throw new Error("Not implemented");
 }
 console.log(showUserGroup("Alice", "Admin"))
