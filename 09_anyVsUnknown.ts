@@ -30,7 +30,7 @@
 
 // TODO: Implémenter les fonctions
 
-export function processUnknown(value: unknown): number {
+export function processUnknown(value: unknown) {
     return typeof value === "string" ? value.length : 0
   throw new Error("Not implemented");
 }
@@ -39,10 +39,12 @@ console.log(processUnknown(123))
 console.log(processUnknown(null))
 
 export function safeParseNumber(value: unknown): number | null {
-    return !!(Number(value)) ? Number(value) : null;
+    return (typeof Number(value) === "number" && !!(Number(value))) ? Number(value) : null;
   throw new Error("Not implemented");
 }
+
 console.log(safeParseNumber("42"))
+console.log(safeParseNumber(0))
 console.log(safeParseNumber(3.14))
 console.log(safeParseNumber("abc"))
 console.log(safeParseNumber(null))

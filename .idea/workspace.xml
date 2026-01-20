@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6196bfc4-3ca5-40ee-b154-461889094fce" name="Changes" comment="feat: ajout exo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_unions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/04_unions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07_intersection.ts" beforeDir="false" afterPath="$PROJECT_DIR$/07_intersection.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/08_tuples.ts" beforeDir="false" afterPath="$PROJECT_DIR$/08_tuples.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/09_anyVsUnknown.ts" beforeDir="false" afterPath="$PROJECT_DIR$/09_anyVsUnknown.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/13_bonus.js" beforeDir="false" afterPath="$PROJECT_DIR$/13_bonus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/14_utilityPartialRequired.ts" beforeDir="false" afterPath="$PROJECT_DIR$/14_utilityPartialRequired.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15_utilityPickOmit.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15_utilityPickOmit.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +69,7 @@
       <updated>1768813973455</updated>
       <workItem from="1768813974503" duration="2405000" />
       <workItem from="1768816422945" duration="23498000" />
-      <workItem from="1768897939028" duration="998000" />
+      <workItem from="1768897939028" duration="8346000" />
     </task>
     <task id="LOCAL-00001" summary="feat: ajout exo">
       <option name="closed" value="true" />

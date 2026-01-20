@@ -24,25 +24,35 @@
  *   createArticle({ title: "New", content: "Article", author: "Jane" })
  *   // { id: <generated>, title: "New", content: "Article", author: "Jane", createdAt: <now>, updatedAt: <now> }
  */
-
 // TODO: Définir les types
-
 export type Article = {
-  // À compléter
+  id: number,
+    title: string,
+    content: string,
+    author: string,
+    createdAt: Date,
+    updatedAt: Date
 };
 
-export type ArticlePreview = unknown; 
+export type ArticlePreview = Pick<Article, "id"| "title"| "author">;
 
-export type ArticleCreate = unknown; 
+export type ArticleCreate = Omit<Article, "id" | "createdAt" | "updatedAt">;
 
 // TODO: Implémenter les fonctions
 
-export function toPreview(article: any): any {
+export function toPreview(article: Article): ArticlePreview {
+    return {id: article.id, title: article.title, author: article.author}
   throw new Error("Not implemented");
 }
 
-export function createArticle(data: any): any {
-  throw new Error("Not implemented");
+const article = { id: 1, title: "Hello", content: "World", author: "John", createdAt: new Date(), updatedAt: new Date() };
+console.log(toPreview(article) ) // { id: 1, title: "Hello", author: "John" }
+
+export function createArticle(data: ArticleCreate): Article {
+  return {...data, id: (Math.floor(Math.random() * 10000)), createdAt: new Date(), updatedAt: new Date() };
+    throw new Error("Not implemented");
 }
 
+console.log(createArticle({ title: "New", content: "Article", author: "Jane" }))
+// { id: <generated>, title: "New", content: "Article", author: "Jane", createdAt: <now>, updatedAt: <now> }
 // npx tsx ./15_utilityPickOmit.ts

@@ -59,8 +59,16 @@ exemple:
 */
 
 const sortObjectByValue = (obj) => {
-
+    const arr = Object.entries(obj)
+    arr.sort((a, b) => a[1] - b[1])
+    return Object.fromEntries(arr)
 };
+
+console.log(sortObjectByValue({
+    "pommes": 3,
+    "bananes": 1,
+    "cerises": 8
+}));
 
 // node ./13_bonus.js
 

@@ -42,7 +42,7 @@ console.log( updateProfile(profile, { age: 26 }))
 // TODO: Implémenter validateCompleteProfile
 
 export function validateCompleteProfile(profile: Partial<UserProfile>) {
-    return profile instanceof UserProfile
+    return !!profile.username && !!profile.email && !!profile.bio && !!profile.age;
   throw new Error("Not implemented") ;
 }
 console.log(validateCompleteProfile({ username: "john" }));
